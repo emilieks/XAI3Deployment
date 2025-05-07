@@ -37,3 +37,13 @@ PartialDependenceDisplay.from_estimator(
     grid_resolution=30,
 )
 plt.show()
+
+# 2D PDP for temperature and humidity
+PartialDependenceDisplay.from_estimator(
+    rf,
+    X,
+    features=[('temp', 'hum')],
+    kind='average',
+    grid_resolution=30
+)
+plt.show()
